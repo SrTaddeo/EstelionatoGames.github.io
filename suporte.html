@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte – EstelionatoGames</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .support-wrapper {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 50px 30px 70px;
+    }
+
+    .support-wrapper .intro {
+      color: #bbbbbb;
+      font-size: 15px;
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+
+    .support-wrapper .obs {
+      color: #666;
+      font-size: 13px;
+      font-style: italic;
+      margin-bottom: 32px;
+    }
+
+    /* FORM */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .form-field label {
+      display: block;
+      font-size: 12px;
+      color: #888;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .form-field label span { color: #cc5555; }
+
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      width: 100%;
+      background: #111111;
+      border: 1px solid #333333;
+      color: #cccccc;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      padding: 9px 12px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus { border-color: #666; }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: #555; }
+
+    .form-field textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-field select option { background: #111; }
+
+    .form-submit { margin-top: 6px; }
+
+    .form-submit button {
+      background: #ffffff;
+      color: #111111;
+      border: none;
+      padding: 11px 28px;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .form-submit button:hover { background: #dddddd; }
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="Imagens/5.png">
+        </a>
+    </div>
+    <nav>
+      <a href="corporativo.html">Corporativo</a>
+      <a class="active" href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="FAQs.html">FAQs</a>
+      <a href="https://www.youtube.com/dethbo%C3%A7bujegr%C3%A7oujhoui" target="_blank" class="btn-trailer">&#9654; ASSISTIR TRAILER</a>
+    </nav>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+
+    <div class="page-title">
+      <h1>Suporte</h1>
+    </div>
+
+    <div class="support-wrapper">
+      <p class="intro">Não encontrou respostas para sua dúvida em nossa página <a href="FAQs.html" style="color:#aaa; text-decoration:underline;">FAQ</a>? Estaremos esperando pelo seu e-mail! Preencha o formulário abaixo e responderemos assim que possível.</p>
+      <p class="obs">Obs: Por favor, realize a abertura de contato por apenas um meio de contato.</p>
+
+      <div class="contact-form">
+        <div class="form-field">
+          <label>Nome <span>*</span></label>
+          <input type="text" placeholder="Seu nome completo">
+        </div>
+        <div class="form-field">
+          <label>E-mail <span>*</span></label>
+          <input type="email" placeholder="seu@email.com">
+        </div>
+        <div class="form-field">
+          <label>Assunto <span>*</span></label>
+          <select>
+            <option value="">Selecione um assunto...</option>
+            <option>Problema técnico</option>
+            <option>Conta Steam</option>
+            <option>Apoiador</option>
+            <option>Recompensas in-game</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Mensagem <span>*</span></label>
+          <textarea placeholder="Descreva seu problema ou dúvida com o máximo de detalhes possível..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="button">Enviar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /main -->
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="footer-nav">
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://store.steampowered.com/" target="_blank">Steam</a>
+      <a href="https://www.facebook.com/oestelionatario[/?locale=pt_BR" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com/R9Lafea%24MH_" target="_blank">YouTube</a>
+      <a href="404.html" target="_blank">Instagram</a>
+      <a href="404.html" target="_blank">Twitter</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 EstelionatoGames</p>
+  </div>
+
+</body>
+</html>

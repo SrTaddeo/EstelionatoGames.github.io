@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Últimas Novidades - EstelionatoGames</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── NEWS SECTION ── */
+    .news-wrapper {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 40px 30px;
+    }
+
+    .news-wrapper h2 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    /* Featured big card */
+    .card-featured {
+      display: block;
+      margin-bottom: 24px;
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      overflow: hidden;
+      transition: border-color 0.15s;
+    }
+    .card-featured:hover { border-color: #555; }
+
+    .card-featured .img-main {
+      height: 445px; 
+      width: 950px
+    }
+
+    .card-featured .card-meta {
+      padding: 16px 20px 20px;
+    }
+    .card-featured .card-date {
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 6px;
+      letter-spacing: 0.05em;
+    }
+    .card-featured .card-title {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Small cards grid */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .card-small {
+      display: flex;
+      background: #111111;
+      border: 1px solid #2a2a2a;
+      overflow: hidden;
+      transition: border-color 0.15s;
+    }
+    .card-small:hover { border-color: #555; }
+
+    .card-small .img-placeholder {
+      width: 120px;
+      min-width: 120px;
+      height: 100px;
+    }
+
+    .card-small .card-meta {
+      padding: 12px 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .card-small .card-date {
+      font-size: 11px;
+      color: #777;
+      margin-bottom: 5px;
+      letter-spacing: 0.05em;
+    }
+    .card-small .card-title {
+      color: #dddddd;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.4;
+    }
+    .card-small .img-small
+    {
+      height: 100px;
+      width: 100px;
+    }
+
+    /* Load more */
+    .load-more {
+      text-align: center;
+      padding: 10px 0 20px;
+    }
+
+    /* ── NEWSLETTER ── */
+    .newsletter {
+      background: #111111;
+      border-top: 1px solid #2a2a2a;
+      padding: 50px 30px;
+      text-align: center;
+    }
+
+    .newsletter h2 {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .newsletter p {
+      color: #888888;
+      font-size: 14px;
+      margin-bottom: 28px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form label {
+      text-align: left;
+      font-size: 12px;
+      color: #888;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    .newsletter-form input {
+      background: #1a1a1a;
+      border: 1px solid #333333;
+      color: #cccccc;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 13px;
+      padding: 9px 12px;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.15s;
+    }
+    .newsletter-form input:focus { border-color: #777; }
+    .newsletter-form input::placeholder { color: #555; }
+
+    .newsletter-form .field { text-align: left; }
+
+    .newsletter-form button {
+      margin-top: 6px;
+      padding: 10px;
+      background: #ffffff;
+      color: #111111;
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    .newsletter-form button:hover { background: #dddddd; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="Imagens/5.png">
+        </a>
+    </div>
+    <nav>
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="FAQs.html">FAQs</a>
+      <a href="https://www.youtube.com/dethbo%C3%A7bujegr%C3%A7oujhoui" target="_blank" class="btn-trailer">&#9654; ASSISTIR TRAILER</a>
+    </nav>
+  </div>
+
+  <!-- MAIN -->
+  <div id="main">
+    <div class="news-wrapper">
+      <h2>Últimas Novidades</h2>
+
+      <!-- Card em destaque -->
+      <a href="#" class="card-featured">
+        <div class="card-meta">
+          <img class="img-main" src="Imagens/1.png" alt="..."> 
+          <div class="card-date">13/02/25</div>
+          <div class="card-title">Dado a problemas pessoais o desenvolvimento está em pausa por tempo indefinido. VOA MLK!!</div>
+        </div>
+      </a>
+
+      <!-- Grade de cards menores -->
+      <div class="cards-grid">
+
+        <a href="#" class="card-small">
+          <img class="img-small" src="Imagens/2.png">
+          <div class="card-meta">
+            <div class="card-date">10/12/22</div>
+            <div class="card-title">UM SALTO DE QUALIDADE: Novas Animações e o Futuro da Narrativa</div>
+          </div>
+        </a>
+
+        <a href="#" class="card-small">
+          <img class="img-small" src="Imagens/2.png">
+          <div class="card-meta">
+            <div class="card-date">02/11/20</div>
+            <div class="card-title">Patch 0.5.211.192 – TRAJADOS ATUALIZAÇÃO DE BARBEIRO, TATUAGEM E ACADEMIA</div>
+          </div>
+        </a>
+
+        <a href="#" class="card-small">
+          <img class="img-small" src="Imagens/2.png">
+          <div class="card-meta">
+            <div class="card-date">05/09/18</div>
+            <div class="card-title">Patch 0.5.203.180 – Novo time de programadores</div>
+          </div>
+        </a>
+
+        <a href="#" class="card-small">
+          <img class="img-small" src="Imagens/2.png">
+          <div class="card-meta">
+            <div class="card-date">30/08/17</div>
+            <div class="card-title">Patch 0.5.181.158 – ATUALIZAÇÃO DE VEÍCULOS</div>
+          </div>
+        </a>
+
+      </div><!-- /cards-grid -->
+
+      <div class="load-more">
+        <a href="#" class="btn">Carregar mais</a>
+      </div>
+    </div><!-- /news-wrapper -->
+
+    <!-- NEWSLETTER -->
+    <div class="newsletter">
+      <h2>Se Inscreva</h2>
+      <p>Inscreva-se em nosso boletim informativo por e-mail para receber anúncios mais recentes, atualizações!</p>
+      <div class="newsletter-form">
+        <div class="field">
+          <label>Nome *</label>
+          <input type="text" placeholder="Seu nome">
+        </div>
+        <div class="field">
+          <label>E-mail *</label>
+          <input type="email" placeholder="seu@email.com">
+        </div>
+        <div class="field">
+          <label>Whatsapp / SMS</label>
+          <input type="text" placeholder="(00) 00000-0000">
+        </div>
+        <button type="button">Inscrever-se</button>
+      </div>
+    </div>
+  </div><!-- /main -->
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="footer-nav">
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://store.steampowered.com/" target="_blank">Steam</a>
+      <a href="https://www.facebook.com/oestelionatario[/?locale=pt_BR" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com/R9Lafea%24MH_" target="_blank">YouTube</a>
+      <a href="404.html" target="_blank">Instagram</a>
+      <a href="404.html" target="_blank">Twitter</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 EstelionatoGames</p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>O Estelionatario – EstelionatoGames</title>
+  <link href="style.css" rel="stylesheet"/>
+  <style>
+
+    /* ── NAV ── */
+    nav {
+      border-bottom: 1px solid var(--border);
+      padding: 14px 40px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-sep { margin: 0 4px; }
+    
+    .nav-crumb {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── ENCERRADO BANNER ── */
+    .banner-encerrado {
+      background: var(--bg-off);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .banner-encerrado strong {
+      color: var(--accent);
+    }
+
+    /* ── LAYOUT ── */
+    .page {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ── COLUNA ESQUERDA ── */
+    .thumb {
+      width: 636px;
+      height: 356px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 56px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+    }
+
+    .category {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    .tab {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--muted);
+      padding: 10px 18px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s;
+    }
+
+    .tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    .prose {
+      font-size: 15px;
+      color: #f5fdff;
+      line-height: 1.85;
+    }
+
+    .prose p { margin-bottom: 18px; }
+
+    .prose h3 {
+
+      font-size: 16px;
+      font-weight: 600;
+      margin: 32px 0 12px;
+      color: var(--text);
+    }
+
+    .prose blockquote {
+      border-left: 3px solid var(--accent);
+      padding: 12px 20px;
+      background: var(--accent-light);
+      border-radius: 0 6px 6px 0;
+      margin: 24px 0;
+      font-size: 12px;
+      color: #c5e3eb;
+      font-style: italic;
+    }
+
+    /* Atualizações */
+    .update {
+      border: 2px solid rgb(41, 41, 41);
+      border-radius: 5px;
+      padding: 24px;
+      margin-top: 30px;
+      background: #81818100;
+      box-shadow: 0px -20px 50px inset #46464613;
+    }
+
+  .update:hover
+  {
+    box-shadow: 0px -20px 40px inset #4646461f;
+  }
+
+    .update__date {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text);
+      margin-bottom: 6px;
+      border-bottom:1px solid #1d1d1d;
+    }
+
+    .update__title {
+
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .update__body {
+      font-size: 14px;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* ── SIDEBAR ── */
+
+    .fund-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+    }
+
+    .fund-raised {
+
+      font-size: 34px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    .fund-goal {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .progress-wrap {
+      background: #e8e8e8;
+      border-radius: 100px;
+      height: 6px;
+      margin-bottom: 6px;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background:#1eb600;
+      border-radius: 100px;
+      width: 100%;
+    }
+
+    .progress-pct {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .fund-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .fund-stat__value {
+
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .fund-stat__label {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .status-badge::before {
+      content: '';
+      width: 7px; height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    /* Recompensas sidebar */
+    .reward {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 12px;
+      background: var(--bg-off);
+      border-bottom: solid 2px #6b6b6b;
+    }
+
+    .reward__price {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      border-bottom: solid 1px #555555;
+    }
+
+    .reward__title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .reward__desc {
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .reward__backers {
+      font-size: 11px;
+      color: #aaa;
+      margin-top: 8px;
+    }
+
+    .reward--esgotado {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px;
+      margin-bottom: 12px;
+      background: var(--bg-off);
+      opacity: 0.5;
+      border-bottom: solid 2px #6b6b6b;
+    }
+
+    /* Criador */
+    .creator-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .creator-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      flex-shrink: 0;
+      border: 1px solid var(--border);
+    }
+
+    .creator-name {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .creator-meta {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* Seção título */
+    .section-label {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 760px) {
+      .page { grid-template-columns: 1fr; gap: 40px; }
+    }
+    
+    
+
+  </style>
+</head>
+<body>
+  <div id="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="Imagens/5.png">
+        </a>
+    </div>
+    <nav>
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a class="active" href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+      <a href="FAQs.html">FAQs</a>
+      <a href="https://www.youtube.com/dethbo%C3%A7bujegr%C3%A7oujhoui" target="_blank" class="btn-trailer">&#9654; ASSISTIR TRAILER</a>
+    </nav>
+  </div>
+
+  <div class="page-title">
+    <h1>Financiamento</h1>
+  </div>
+
+  <div class="banner-encerrado">
+    Esta campanha foi encerrada em <strong>outubro de 2022</strong>. Obrigado a todos os apoiadores.
+  </div>
+
+  <div class="page">
+
+    <!-- COLUNA ESQUERDA -->
+    <main>
+
+      <div>
+        <img class="thumb" src="Imagens/0.png">
+      </div>
+      <p class="category">Games Independentes · Mundo Aberto</p>
+      <h1>O Estelionatario</h1>
+      <p class="subtitle">O jogo de mundo aberto que a indústria se recusa a fazer</p>
+
+      <div class="tabs">
+        <div class="tab active">Sobre</div>
+        <div class="tab">Recompensas</div>
+        <div class="tab">Atualizações (5)</div>
+      </div>
+
+      <div class="prose">
+        <p>
+          <strong>O Estelionatario</strong> é um jogo de ação e mundo aberto ambientado no Brasil contemporâneo,
+          desenvolvido inteiramente por uma equipe nacional independente. O projeto nasce da convicção de que o Brasil
+          possui história, cultura e personagens suficientes para protagonizar uma experiência de jogo de primeira linha —
+          sem precisar importar referências ou se submeter a tendências editoriais dos grandes estúdios.
+        </p>
+        <p>
+          O jogador assume o papel de Edilson "Didi" Cavalcante, um ex-agente de segurança que, após denunciar esquemas
+          internos de corrupção, precisa sobreviver e reconstruir sua vida em uma metrópole fragmentada. A narrativa
+          percorre favelas, centros históricos, zonas industriais e o interior do país, com mais de 60 missões
+          planejadas e um mapa inspirado em cinco cidades reais.
+        </p>
+
+        <blockquote>
+          "Acreditamos que o gamer brasileiro merece ver sua própria realidade representada com honestidade e qualidade
+          técnica. Este projeto existe porque vocês acreditaram primeiro."
+          <br><br>— Equipe EstelionatoGames
+        </blockquote>
+
+        <h3>Tecnologia</h3>
+        <p>
+          O jogo é desenvolvido sobre o <strong>BrasilEngine</strong>, um motor gráfico proprietário criado pela equipe
+          ao longo de quatro anos, otimizado para hardware de médio alcance e para a representação de ambientes
+          urbanos densos. Os sistemas de física, IA de NPCs e ciclo de dia/noite são desenvolvidos internamente.
+        </p>
+        <p>
+          A previsão de entrega da versão final para PC é o <strong>segundo semestre de 2024</strong>.
+          Versões para console serão avaliadas conforme o andamento do desenvolvimento.
+        </p>
+
+        <hr/>
+
+        <p class="section-label">Atualizações da campanha</p>
+
+        <div class="update">
+          <div class="update__date">1 de janeiro de 2026</div>
+          <div class="update__title">Novidades na equipe</div>
+          <div class="update__body">
+            A partir de hoje nossa equipe inteira começa a trabalhar no projeto em tempo integral! Isso vai garantir um lançamento mais proximo.
+            O acesso antecipado dp pré-alpha foi um sucesso e os feedbacks ja eastão sendo analisados para melhorias, lembrando que as artes ainda serão adicionadas, então todo feedback sobre a falta de animações ou texturas não sera respondido.
+            O envido dos itens que não foram recebidos ainda já esta em andamento. Obrigado pela paciencia
+            Com todas as novidades o prazo para o lançamento do jogo passa a ser outubro de 2027!
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update__date">15 de março de 2024</div>
+          <div class="update__title">Refatoração do engine e novo cronograma</div>
+          <div class="update__body">
+            Informamos que o BrasilEngine passou por uma revisão estrutural significativa para garantir
+            a estabilidade necessária nas próximas fases. O novo prazo estimado para entrega da build de pré-alpha
+            antecipado é dezembro de 2025. Agradecemos a compreensão.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update__date">3 de outubro de 2022</div>
+          <div class="update__title">Primeiras imagens do ambiente de São Paulo</div>
+          <div class="update__body">
+            Compartilhamos três capturas de tela do mapa em desenvolvimento. As imagens ainda não representam
+            o produto final — iluminação, texturas e densidade de elementos estão sendo refinadas.
+            A equipe conta agora com dois desenvolvedores em tempo integral. Mas o treinamento dos novos devs vai atrasar alguns processos.
+            O enfio dos itens para apoiadores ira começar em breve e é prevista para terminar completamente no final de 2023. 
+            Novo prazo para o lançamento final é junho de 2024.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update__date">22 de maio de 2019</div>
+          <div class="update__title">Mudança de planos</div>
+          <div class="update__body">
+            Depois de uma analise focada dos gastos do estúdio descidimos abandoras a Unreal 4 e migrar para Unreal 5.
+            Essa mudança vai atrasar alguns processos internos mas sera para o bem geral do projeto.
+            A entrega dos itens fisicos dos apoiadores seram adiadas para 2020 quando o pré-alpha do jogo for lanaçado.
+            Com todas essas mudanças o prazo final do jogo passa a ser outubro de 2022.
+          </div>
+        </div>
+
+        <div class="update">
+          <div class="update__date">12 de janeiro de 2019</div>
+          <div class="update__title">Nota da equipe</div>
+          <div class="update__body">
+            Passamos por um período de reorganização interna. O desenvolvimento segue ativo.
+            Quando tivermos material consolidado para apresentar, os apoiadores serão comunicados diretamente
+            por e-mail. Agradecemos a paciência e a confiança de cada um.
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="fund-card">
+        <div class="status-badge">Financiado com sucesso</div>
+        <div class="fund-raised">R$ 185.541</div>
+        <div class="fund-goal">de uma meta de R$ 50.000</div>
+        <div class="progress-wrap">
+          <div class="progress-bar"></div>
+        </div>
+        <div class="progress-pct">250% financiado</div>
+        <div class="fund-stats">
+          <div>
+            <div class="fund-stat__value">3.847</div>
+            <div class="fund-stat__label">apoiadores</div>
+          </div>
+          <div>
+            <div class="fund-stat__value">Encerrado</div>
+            <div class="fund-stat__label">outubro · 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 20px;">
+        <p class="section-label">Criador</p>
+        <div class="creator-card">
+          <div class="creator-avatar"><a href="projetos-grid.html">🕹️</a></div>
+          <div>
+            <div class="creator-name">EstelionatoGames</div>
+            <div class="creator-meta">São Paulo, SP</div>
+            <div class="creator-meta"><a href="projetos-grid.html">3 projetos</a> · Identidade verificada</div>
+          </div>
+        </div>
+      </div>
+
+
+          <p class="section-label">Recompensas oferecidas</p>
+  
+          <div class="reward--esgotado">
+            <div class="reward__price">R$ 10</div>
+            <div class="reward__title">Apoiador Amigo</div>
+            <div class="reward__desc">A satisfação de ajudar. :)</div>
+            <div class="reward__backers">1000 apoiadores · Limite atingido</div>
+          </div>
+
+          <div class="reward">
+            <div class="reward__price">R$ 25</div>
+            <div class="reward__title">Apoiador Digital</div>
+            <div class="reward__desc">+ Nome nos créditos do jogo <br> + papel de parede exclusivo em 4K.</div>
+            <div class="reward__backers">529 apoiadores</div>
+          </div>
+
+          <div class="reward">
+            <div class="reward__price">R$ 50</div>
+            <div class="reward__title">Apoiador Digital Plus</div>
+            <div class="reward__desc">+ Nome nos créditos do jogo em destaque <br>+ papel de parede exclusivo em 4K.</div>
+            <div class="reward__backers">734 apoiadores</div>
+          </div>
+  
+          <div class="reward">
+            <div class="reward__price">R$ 80</div>
+            <div class="reward__title">Apoiador Digital "zika"</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ skin de personagem especial quando o jogo lançar. <br>+ Cópia mídia digital no day one do lançamento</div>
+            <div class="reward__backers">611 apoiadores</div>
+          </div>
+  
+          <div class="reward--esgotado">
+            <div class="reward__price">R$ 150</div>
+            <div class="reward__title">Apoiador Digital acesso antecipado</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ acesso ao beta antecipado</div>
+            <div class="reward__backers">500 apoiadores · Limite atingido</div>
+          </div>
+
+          <div class="reward">
+            <div class="reward__price">R$ 300</div>
+            <div class="reward__title">Apoiador Digital Plus</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ Call com os devs para agradecer.<br>(apenas primeiros 10 apoiadores)<br>+ Cópia mídia digital com pacote deluxe no day one do lançamento</div>
+            <div class="reward__backers">180 apoiadores</div>
+          </div>
+
+          
+          <div class="reward--esgotado">
+            <div class="reward__price">R$ 500</div>
+            <div class="reward__title">Apoiador Digital Supremo</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ acesso a loja exclusiva com merch do jogo. <br>+ Seu nome ou tag pixado em algum lugar do mapa.</div>
+            <div class="reward__backers">400 apoiadores · Limite atingido</div>
+          </div>
+
+          <div class="reward">
+            <div class="reward__price">R$ 950</div>
+            <div class="reward__title">Apoiador Físico</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ acesso a loja exclusiva com merch do jogo. <br>+ Cópia mídia física com envio pago(Brasil apenas).</div>
+            <div class="reward__backers">202 apoiadores</div>
+          </div>
+
+          <div class="reward reward--esgotado">
+            <div class="reward__price">R$ 1.000</div>
+            <div class="reward__title">Investidor — Esgotado</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ autográgo na midia física.</div>
+            <div class="reward__backers">10 apoiadores · Limite atingido</div>
+          </div>
+
+          <div class="reward reward">
+            <div class="reward__price">R$ 2.000</div>
+            <div class="reward__title">Sócio — Esgotado</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ uma cópia física adcional com caixa de arte alternativa numerada.</div>
+            <div class="reward__backers">1 apoiadores</div>
+          </div>
+
+          <div class="reward reward">
+            <div class="reward__price">R$ 5.000</div>
+            <div class="reward__title">Sócio Fundador — Esgotado</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ visita ao estúdio.</div>
+            <div class="reward__backers">4 apoiadores</div>
+          </div>
+
+          <div class="reward reward">
+            <div class="reward__price">R$ 15.000</div>
+            <div class="reward__title">Fundador</div>
+            <div class="reward__desc">Tudo dos tiers anteriores <br>+ acesso a todas as versões e testes do jogo</div>
+            <div class="reward__backers">2 apoiadores</div>
+          </div>
+
+        </div>
+
+
+
+    </aside>
+  </div>
+
+  <div id="footer">
+    <div class="footer-nav">
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://store.steampowered.com/" target="_blank">Steam</a>
+      <a href="https://www.facebook.com/oestelionatario[/?locale=pt_BR" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com/R9Lafea%24MH_" target="_blank">YouTube</a>
+      <a href="404.html" target="_blank">Instagram</a>
+      <a href="404.html" target="_blank">Twitter</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 BetagamesGroup</p>
+  </div>
+
+</body>
+</html>

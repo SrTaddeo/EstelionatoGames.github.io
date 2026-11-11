@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs – EstelionatoGames</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .faq-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 50px 30px 70px;
+    }
+
+    .faq-section-title {
+      color: #ffffff;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 16px;
+    }
+
+
+    .faq-intro-box h3 {
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .faq-intro-box p {
+      color: #888888;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* ACCORDION */
+    .faq-item {
+      border: 1px solid #2a2a2a;
+      background: #111111;
+      margin-bottom: 4px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #cccccc;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: left;
+      padding: 16px 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: color 0.15s;
+    }
+    .faq-question:hover { color: #ffffff; }
+    .faq-item.open .faq-question { color: #ffffff; }
+
+    .faq-arrow {
+      font-size: 10px;
+      color: #666;
+      flex-shrink: 0;
+      transition: transform 0.25s;
+    }
+    .faq-item.open .faq-arrow { transform: rotate(180deg); color: #aaa; }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    .faq-item.open .faq-answer { max-height: 800px; }
+
+    .faq-answer-inner {
+      border-top: 1px solid #2a2a2a;
+      padding: 16px 20px 20px;
+      color: #888888;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .faq-answer-inner strong { color: #cccccc; }
+
+    .faq-answer-inner ol {
+      padding-left: 18px;
+      margin-top: 8px;
+    }
+    .faq-answer-inner ol li { margin-bottom: 6px; }
+
+    .faq-answer-inner a { color: #aaaaaa; text-decoration: underline; }
+    .faq-answer-inner a:hover { color: #ffffff; }
+
+
+  </style>
+</head>
+<body>
+
+  <div id="header">
+    <div class="logo">
+        <a href="index.html">
+          <img src="Imagens/5.png">
+        </a>
+    </div>
+    <nav>
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+      <a class="active" href="FAQs.html">FAQs</a>
+      <a href="https://www.youtube.com/dethbo%C3%A7bujegr%C3%A7oujhoui" target="_blank" class="btn-trailer">&#9654; ASSISTIR TRAILER</a>
+    </nav>
+  </div>
+
+
+   <div id="main">
+
+    <div class="game-banner">
+      <img src="Imagens/5.png" alt="000">
+    </div>
+
+    <div class="page-title">
+      <h1>Respostas para perguntas frequentes</h1>
+    </div>
+
+    <div class="faq-wrapper">
+
+      <div class="faq-section-title">Perguntas Frequentes</div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Por que o jogo se chama O Estelionatário?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            O nome é uma referência direta ao crime de estelionato, artigo 171. Essa tipificação criminal serve como a base temática central para a construção do enredo do Modo História, que será apresentado na versão final do jogo.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          O Estelionatario utiliza assets prontos?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Sim. Inclusive, alguns dos maiores jogos da indústria utilizam e expõem tecnologias de terceiros logo em sua abertura. Hoje, o uso de addons e middlewares é padrão da indústria para otimizar processos.<br><br>
+            Nosso projeto é fruto da colaboração de cerca de 100 profissionais que já passaram pelo projeto, muitos com mais de uma década de experiência no mercado. Desde o início, muitos de nossos sistemas complexos feitos do zero — como a nossa oficina de tuning — já foram confundidos com assets prontos.<br><br>
+            Além disso, é importante diferenciar o produto final de um Acesso Antecipado. Algumas críticas focam em elementos que são apenas placeholders (itens temporários para teste). Utilizar essas ferramentas modernas não diminui o trabalho autoral; pelo contrário, permite focarmos ainda mais na criação de uma experiência única.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Minha conta Steam foi invadida. Vocês podem me ajudar a recuperar o jogo?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Lamentamos muito que isso tenha acontecido. No entanto, <strong>nós não temos acesso ao banco de dados de usuários ou ao gerenciamento de contas da Steam.</strong><br><br>
+            Como toda a transação, segurança e biblioteca são gerenciadas pela Valve, nós não conseguimos interferir ou recuperar acessos. A única forma de resolver essa situação é entrando em contato diretamente com o <strong>Suporte da Steam</strong> para iniciar o processo de recuperação da conta.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Ao tentar abrir o jogo, aparece o erro "LowLevelFatalError". O que pode ser?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Geralmente, esse erro indica questões relacionadas ao <strong>hardware</strong> (componentes físicos) do seu computador.<br><br>
+            Antes de entrar em contato, pedimos que realize a seguinte verificação:
+            <ol>
+              <li><strong>Confira os Requisitos:</strong> Verifique na página da Steam se o seu computador atende a todos os requisitos mínimos exigidos para rodar o jogo.</li>
+              <li><strong>Contate o Suporte:</strong> Caso sua máquina atenda aos requisitos e o erro persista, entre em contato conosco através da nossa <a href="suporte.html">página de Suporte</a>.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          O jogo roda 100% online?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <strong>Sim.</strong> O jogo atualmente exige conexão constante com a internet para fins de analise de dados. Porém a versão final não ira exigir conexão constante, apenas para elementos multplayer ou online.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          O jogo será leve? (Quais são os requisitos?)
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Para a <strong>versão final</strong>, a expectativa é que os requisitos sejam semelhantes aos de jogos de porte similar lançados na mesma época.<br><br>
+            Atualmente, a <strong>versão Alpha</strong> possui requisitos minimos considerados altos por ser uma biuld de trabalho não otmizada.<br><br>
+            <em>Nota: Esses requisitos podem variar ao longo do desenvolvimento, sofrendo alterações conforme novas implementações e otimizações forem realizadas até o lançamento final.</em>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Sou apoiador do Financiamento, onde ficarão as recompensas digitais in-game?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Todas as recompensas digitais — tais como <strong>"nome nos créditos"</strong>, <strong>"pichos"</strong>, <strong>"nome escrito em alguma área do game"</strong>, <strong>"seja um vilão"</strong>, <strong>"seja um pedestre"</strong> — estão sendo incluídas no jogo.<br><br>
+            A inserção dessas recompensas acontece de forma inalienável, seguindo o que nossa <strong>Direção de Arte</strong> apontar como a melhor opção para o jogo. Caso você não tenha encontrado ou participado a tempo dos questionários, basta entrar em contato com nosso suporte.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Sou apoiador do Financiamento e não recebi qualquer e-mail.
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Caso não esteja recebendo nossos comunicados, siga estes passos:
+            <ol>
+              <li><strong>Verifique o Spam:</strong> Olhe atentamente sua caixa de spam ou lixo eletrônico.</li>
+              <li><strong>Confira o Cadastro:</strong> Verifique se o e-mail que você está acessando é exatamente o mesmo utilizado no cadastro do Catarse.</li>
+              <li><strong>Troca de Provedor:</strong> Se necessário, altere o endereço de e-mail cadastrado para outro provedor (ex: Gmail, Outlook), pois alguns provedores podem bloquear o recebimento.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Sou apoiador do Financiamento, posso trocar minha chave da Steam por uma chave de console?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <strong>Infelizmente, não é possível alterar a chave.</strong> No entanto, fique tranquilo: a sua chave da Steam é vitalícia e continuará válida normalmente, independentemente de parcerias ou lançamentos em outras plataformas.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Sou apoiador do Financiamento, até quando vou receber atualizações antecipadas sobre o projeto?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            O acesso antecipado refere-se a etapas específicas do desenvolvimento (Alpha, Pré-Alpha). Portanto, o recebimento de novidades exclusivas ocorre <strong>somente até a publicação da respectiva versão na Steam</strong>. Assim que a versão se torna pública na plataforma, o ciclo de antecipação daquela etapa se encerra.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Porque dois financiamentos coletivos?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            Vimos que a ideia de uma nova campanha seria muito importante, pois além de ser uma nova oportunidade para que as pessoas que não conseguiram apoiar na primeira campanha, 
+            aqueles que conheceram O Estelionatario em sua biuld de divulgação atraves dos inumeros youtubers que cobriram o jogo também podem estar conferindo o game e nos ajudar a melhorar ainda mais.<br><br>
+            Nosso objetivo com uma nova campanha é potencializar aquilo que construímos ao longo dos últimos meses para que possamos continuar com o ritmo acelerado de desenvolvimento, 
+            com isso podemos trazer uma versão ainda sólida do game com as principais mecânicas de jogo, e assim fazer com que O Estelionatario possa trilhar 
+            a passos largos e firmes a caminho de uma versão mais próxima da final
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          Porque usar uma forma própria de financiamento coletivo e não uma plataforma já estabelecida e confiavel?
+          <span class="faq-arrow">&#9660;</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+  <!-- /main -->
+
+  <!-- FOOTER -->
+  <div id="footer">
+    <div class="footer-nav">
+      <a href="corporativo.html">Corporativo</a>
+      <a href="suporte.html">Suporte</a>
+      <a href="gta-brasileiro-institucional.html">Financiamento coletivo</a>
+      <a href="downloads.html">Downloads</a>
+    </div>
+    <div class="footer-social">
+      <a href="https://store.steampowered.com/" target="_blank">Steam</a>
+      <a href="https://www.facebook.com/oestelionatario[/?locale=pt_BR" target="_blank">Facebook</a>
+      <a href="https://www.youtube.com/R9Lafea%24MH_" target="_blank">YouTube</a>
+      <a href="404.html" target="_blank">Instagram</a>
+      <a href="404.html" target="_blank">Twitter</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 BetagamesGroup</p>
+  </div>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+
+</body>
+</html>
